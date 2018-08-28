@@ -1,12 +1,13 @@
+---
 swagger: "2.0"
 x-collection-name: Xignite
-x-complete: 1
+x-complete: 0
 info:
-  title: Xignite VWAP
-  description: provides-delayed-and-historical-volumeweightedaverage-price-vwap-information-
+  title: Xignite Rates Get Todays Rate
+  description: Returns end of day closing value for a rate
   version: 1.0.0
 host: www.xignite.com
-basePath: xVWAP.json/XigniteVWAP
+basePath: xRates.json/XigniteRates
 schemes:
 - http
 produces:
@@ -166,27 +167,17 @@ paths:
       - Market Data
       - Todays
       - Rate
-  GetTodaysSecurityHeadlines:
-    get:
-      summary: Get Todays Security Headlines
-      description: Returns headlines for a company published today.
-      operationId: getGettodayssecurityheadlines
-      x-api-path-slug: gettodayssecurityheadlines-get
-      parameters:
-      - in: query
-        name: Identifier
-        description: The ticker symbol for company
-      - in: query
-        name: IdentifierType
-        description: The identifier to use
-      - in: query
-        name: _Token
-        description: The API Key
-      responses:
-        200:
-          description: OK
-      tags:
-      - Market Data
-      - Todays
-      - Security
-      - Headlines
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
